@@ -1,10 +1,27 @@
 # This squirrel is on fire!
 ## A word replacing extension for Google Chrome
 
-Defaults to replacing the word "girl" with "squirrel".
+Defaults to replacing the word "girl" with "squirrel". You can pick your own words (or even emojis) on the options page.
 
-Screenshot example:
+Test it out by searching for the following song lyrics:
+Primadonna Girl - Marina and the Diamonds
+Run The World (Girls) - Beyoncé
+Girl On Fire - Alicia Keys
 
-![screenshot](https://raw.githubusercontent.com/hsubox/fire-squirrel/master/screenshot.png "screenshot")
+![logo](screenshots/logo_screenshot.png)
 
-TODO: add to Chrome store, but in the meanwhile, you can add use these files to add it yourself to your browser (in developer mode)
+![options](screenshots/options_screenshot.jpg)
+
+Matches capitalization found on page
+
+## Chrome Store
+
+Available on Chrome Store [here](https://chrome.google.com/webstore/detail/this-squirrel-is-on-fire/hbkgdoeflcloeepeihpdekknnnedplom)
+
+## Sample screenshots:
+
+![screenshot](./screenshots/primadonna_screenshot.png)
+
+![screenshot](./screenshots/girl_on_fire_screenshot.png)
+
+![screenshot](./screenshots/girls_run_the_world_screenshot.png)
