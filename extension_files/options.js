@@ -14,6 +14,15 @@ form.addEventListener("submit", function(event) {
 });
 
 chrome.storage.sync.get(["old_word", "new_word"], function(items) {
-  form.elements.old_word.value = items.old_word;
-  form.elements.new_word.value = items.new_word;
+  if (!items.old_word || !items.new_word) {
+    chrome.storage.sync.set({
+      "old_word": "girl",
+      "new_word": "squirrel",
+    }, function(){});
+    form.elements.old_word.value = items.old_word;
+    form.elements.new_word.value = items.new_word;
+  } else {
+    form.elements.old_word.value = items.old_word;
+    form.elements.new_word.value = items.new_word;
+  }
 });

@@ -9,5 +9,5 @@ function findAndReplaceDOMText(old_word, new_word) {
 chrome.storage.sync.get(["old_word", "new_word"], function(items) {
   var old_word = items.old_word || "girl";
   var new_word = items.new_word || "squirrel";
-  $('document').ready(findAndReplaceDOMText(old_word, new_word));
+  $('document').delay(500).ready(findAndReplaceDOMText(old_word, new_word));
 });
