@@ -6,6 +6,6 @@ chrome.runtime.onInstalled.addListener(function() {
     "old_word": DEFAULT_OLD_WORD,
     "new_word": DEFAULT_NEW_WORD,
   }, function(){
-    chrome.runtime.openOptionsPage();
+    // chrome.runtime.openOptionsPage();
   });
 });

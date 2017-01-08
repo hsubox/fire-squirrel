@@ -6,7 +6,7 @@
   "options_page": "options.html",
   "background": {
     "persistent": false,
-    "scripts": ["onStartUp.js"]
+    "scripts": ["onInstalled.js"]
   },
   "content_scripts": [
     {
