@@ -1,6 +1,3 @@
-var DEFAULT_OLD_WORD = "girl";
-var DEFAULT_NEW_WORD = "squirrel";
-
 function matchCase(text, pattern) {
     // uses the first letter to determine if word is capitalized; second letter to determine if all letters in word are capitalized
     firstLetter = pattern.charCodeAt(0);

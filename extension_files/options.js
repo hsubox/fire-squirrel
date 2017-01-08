@@ -1,32 +1,28 @@
 var DEFAULT_OLD_WORD = "girl";
 var DEFAULT_NEW_WORD = "squirrel";
 
-var form = document.querySelector("form");
-
-form.addEventListener("submit", function(event) {
-  if (!form.elements.old_word.value || !form.elements.new_word.value) {
-    alert("Fields cannot be empty!");
-    return;
-  }
-
-  event.preventDefault();
+function setWords(old_word, new_word, callback) {
   chrome.storage.sync.set({
     "old_word": form.elements.old_word.value,
     "new_word": form.elements.new_word.value,
-  }, function(){});
-});
+  }, callback);
+}
 
-chrome.storage.sync.get(["old_word", "new_word"], function(items) {
-  if (!items.old_word || !items.new_word) {
-    chrome.storage.sync.set({
-      "old_word": DEFAULT_OLD_WORD,
-      "new_word": DEFAULT_NEW_WORD,
-    }, function(){
-      form.elements.old_word.value = DEFAULT_OLD_WORD;
-      form.elements.new_word.value = DEFAULT_NEW_WORD;
-    });
-  } else {
+function getWords() {
+  chrome.storage.sync.get(["old_word", "new_word"], function(items) {
     form.elements.old_word.value = items.old_word;
     form.elements.new_word.value = items.new_word;
+  });
+}
+
+var form = document.querySelector("form");
+getWords();
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  if (form.elements.old_word.value.trim() == "" || form.elements.new_word.value.trim() == "") {
+    alert("Fields cannot be empty!");
+  } else {
+    setWords(form.elements.old_word.value, form.elements.new_word.value, getWords);
   }
 });
