@@ -28,16 +28,8 @@ function findAndReplaceDOMText(old_word, new_word) {
 chrome.storage.sync.get(["old_word", "new_word"], function(items) {
   var old_word = items.old_word;
   var new_word = items.new_word;
-  if (!old_word || !new_word) {
-    chrome.storage.sync.set({
-      "old_word": DEFAULT_OLD_WORD,
-      "new_word": DEFAULT_NEW_WORD,
-    }, function(){
-      old_word = DEFAULT_OLD_WORD;
-      new_word = DEFAULT_NEW_WORD;
-      $('document').delay(500).ready(findAndReplaceDOMText(old_word, new_word));
-    });
-  } else {
-    $('document').delay(500).ready(findAndReplaceDOMText(old_word, new_word));
-  }
+
+  $('document').ready(function() {
+    setTimeout(findAndReplaceDOMText.bind(null, old_word, new_word), 1000);
+  });
 });
