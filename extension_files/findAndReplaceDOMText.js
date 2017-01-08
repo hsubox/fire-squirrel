@@ -16,11 +16,11 @@ function matchCase(text, pattern) {
 }
 
 function findAndReplaceDOMText(old_word, new_word) {
-  $('body :not(script)').contents().filter(function() {
+  $('body :not(script) :not(iframe)').contents().filter(function() {
     return this.nodeType === 3; // Text node
   }).each(function() {
     this.nodeValue = this.nodeValue.replace(new RegExp(old_word, 'gi'), function(match) {
-        return matchCase(new_word, match);
+      return matchCase(new_word, match);
     });
   });
 };
