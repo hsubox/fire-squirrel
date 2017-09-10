@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "this squirrel is on fire!",
-  "version": "0.0.0.3",
-  "description": "Replace a word on a page with another word",
+  "version": "0.0.0.4",
+  "description": "Replace a word on a page with another word. Now also supports urls!",
   "options_page": "options.html",
   "background": {
     "persistent": false,
@@ -11,13 +11,12 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["jquery-3.1.1.min.js", "findAndReplaceDOMText.js"],
+      "js": ["findAndReplaceDOMText.js"],
       "all_frames": true,
       "run_at": "document_idle"
     }
   ],
-  "page_action" :
-  {
+  "browser_action": {
     "default_icon" : "icon-96.png",
     "default_title" : "this squirrel is on fire!"
   },

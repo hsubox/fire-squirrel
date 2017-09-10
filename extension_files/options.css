@@ -1,3 +1,7 @@
 body {
   margin: 50px;
 }
+
+.change-scope {
+  font-weight: 400;
+}

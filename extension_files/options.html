@@ -10,17 +10,23 @@
         <div class="form-group">
           <label for="old_word" class="col-sm-2 control-label">Find:</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="old_word" placeholder="girl"/>
+            <input type="text" class="form-control" id="old-word" placeholder="girl"/>
           </div>
-        </div>
-        <br/>
-        <div class="form-group">
           <label for="new_word" class="col-sm-2 control-label">Replace:</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="new_word" placeholder="squirrel"/>
+            <input type="text" class="form-control" id="new-word" placeholder="squirrel"/>
           </div>
-        </div>
-        <div class="form-group">
+          <label class="col-sm-2 control-label">Scope:</label>
+          <div class="col-sm-10">
+            <input type="radio" id="change-none" name="change-scope"/>
+            <label for="change-none" class="change-scope">Nothing</label>
+            <br/>
+            <input type="radio" id="change-texts" name="change-scope"/>
+            <label for="change-texts" class="change-scope">Text only</label>
+            <br/>
+            <input type="radio" id="change-links" name="change-scope"/>
+            <label for="change-links" class="change-scope">Text and links</label>
+          </div>
           <div class="col-sm-offset-2 col-sm-10">
             <button type="submit" class="btn btn-default">Save</button>
           </div>
