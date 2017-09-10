@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "this squirrel is on fire!",
+  "name": "Fire Squirrel",
   "version": "0.0.0.4",
   "description": "Replace a word on a page with another word. Now also supports urls!",
   "options_page": "options.html",
@@ -17,15 +17,15 @@
     }
   ],
   "browser_action": {
-    "default_icon" : "icon-96.png",
-    "default_title" : "this squirrel is on fire!"
+    "default_icon": "icon-96.png",
+    "default_title": "Fire Squirrel"
   },
-  "permissions" : [
+  "permissions": [
     "storage"
   ],
   "icons" : {
-    "48" : "icon-48.png",
-    "96" : "icon-96.png",
-    "128" : "icon-128.png"
+    "48": "icon-48.png",
+    "96": "icon-96.png",
+    "128": "icon-128.png"
   }
 }

@@ -10,7 +10,7 @@ Girl On Fire - Alicia Keys
 
 ![logo](screenshots/logo_screenshot.png)
 
-![options](screenshots/options_screenshot.jpg)
+![options](screenshots/options_screenshot.png)
 
 Matches capitalization found on page
 
