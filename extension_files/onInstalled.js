@@ -3,7 +3,7 @@
   const DEFAULT_NEW_WORD = "squirrel";
   const DEFAULT_CHANGE_SCOPE = "change-texts";
 
-  chrome.runtime.onInstalled.addListener(function() {
+  chrome.runtime.onInstalled.addListener(function(details) {
     getExistingOptionsOnInstall()
     .then((oldOptions) => {
       const {
@@ -22,7 +22,9 @@
       .then(() => {
         setNewOptionsOnInstall(newOptions)
         .then(() => {
-          chrome.runtime.openOptionsPage();
+          if (details.reason == "install") {
+            chrome.runtime.openOptionsPage();
+          }
         });
       });
     });
