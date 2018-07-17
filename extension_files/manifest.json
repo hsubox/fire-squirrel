@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Fire Squirrel",
-  "version": "0.0.0.4",
+  "version": "0.0.0.5",
   "description": "Replace a word on a page with another word.",
   "options_page": "options.html",
   "background": {

@@ -2,6 +2,6 @@ body {
   margin: 50px;
 }
 
-.change-scope {
+.change-scope, .url-scope {
   font-weight: 400;
 }

@@ -77,8 +77,25 @@
     "oldWord",
     "newWord",
     "changeScope",
+    "urlList",
+    "urlScope",
   ], function(options) {
-    const { oldWord, newWord, changeScope } = options;
-    findAndReplaceDOMText(oldWord, newWord, changeScope);
+    const {
+      oldWord,
+      newWord,
+      changeScope,
+      urlList,
+      urlScope,
+    } = options;
+
+    const urlSet = new Set(urlList.split(',').map(url => url.trim()));
+    const hostInList = urlSet.has(window.location.host);
+
+    if (
+      (urlScope === 'blacklist' && !hostInList) ||
+      (urlScope === 'whitelist' && hostInList)
+    ) {
+      findAndReplaceDOMText(oldWord, newWord, changeScope);
+    }
   });
 })();
