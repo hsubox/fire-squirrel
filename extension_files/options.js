@@ -24,7 +24,7 @@
           option.checked = true;
         }
       }
-      form.elements['url-list'].value = options.urlList || "";
+      form.elements['url-list'].value = options.urlList;
       for (let option of form.elements['url-scope']) {
         if (options.urlScope == option.id) {
           option.checked = true;
